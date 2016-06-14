@@ -16,24 +16,25 @@ function guessNumber()
 {
     var userinput = parseInt(document.getElementById("input1").value);
     
+    var numberToGuess = numberGuess();
     
-    if (userinput > numberGuess().numberToGuess){
+    if (userinput > numberToGuess){
         
         document.getElementById("demo").innerHTML = "Too high";
-        document.getElementById("demo2").innerHTML = "The correct number was " + numberGuess().numberToGuess;
-        countGuesses()
+        document.getElementById("demo2").innerHTML = "The correct number was " + numberToGuess;
+        countGuesses();
     }
     else if(userinput < numberGuess().numberToGuess)
     {
         document.getElementById("demo").innerHTML = "Too low";
-        document.getElementById("demo2").innerHTML = "The correct number was " + numberGuess().numberToGuess;
-        countGuesses()
+        document.getElementById("demo2").innerHTML = "The correct number was " + numberToGuess;
+        countGuesses();
     }
     else 
     {
         document.getElementById("demo").innerHTML = "Well Done";
-        document.getElementById("demo2").innerHTML = "The correct number was " + numberGuess().numberToGuess;
-        countGuesses()
+        document.getElementById("demo2").innerHTML = "The correct number was " + numberToGuess;
+        countGuesses();
     }
 
 function countGuesses()
