@@ -6,18 +6,17 @@ event1.addEventListener('click', guessNumber, false);
 
 var numberGuesses = 0;
 
-function numberGuess(){
-    
-    var numberToGuess = Math.floor(Math.random()*10);
+function numberGuess()
+{
+    var numberToGuess = Math.floor(Math.random()*10)+1;
     return numberToGuess;
 }
 
 function guessNumber()
 {
     var userinput = parseInt(document.getElementById("input1").value);
-    
     var numberToGuess = numberGuess();
-    
+        
         if (userinput > numberToGuess)
         {
 
@@ -33,16 +32,17 @@ function guessNumber()
         }
         else 
         {
+
             document.getElementById("demo").innerHTML = "Well Done";
             document.getElementById("demo2").innerHTML = "The correct number was " + numberToGuess;
             countGuesses();
         }
-    }
+}
+    
 
 function countGuesses()
     {
         numberGuesses++;
         document.getElementById("demo3").innerHTML = "You made " + numberGuesses + " guesses";
     }
-}
 
